@@ -3,4 +3,6 @@ class Quote < ActiveRecord::Base
   validates_presence_of :quote
   validates_presence_of :character
 
+  belongs_to :character
+
 end

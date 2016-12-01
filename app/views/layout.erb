@@ -11,15 +11,16 @@
     application.css is where you put your styles
   -->
   <link rel="stylesheet" href="/css/application.css">
-  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-  
+
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
-  <script src="js/bootstrap.min.js"></script>
 
   <title></title>
 </head>
 <body>
+  <header>
+    <%= erb :'/_header' %>
+  </header>
   <%= yield %>
 </body>
 </html>
