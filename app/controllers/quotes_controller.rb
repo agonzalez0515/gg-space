@@ -1,11 +1,12 @@
 get '/quotes' do
-  @nasa_info = NasaApi.get_api_info
+  # @nasa_info = NasaApi.get_api_info
   quotes = Quote.all
   if request.xhr?
     @random_quote = quotes.sample
-    erb :'_text'
+    erb :'_text', layout: false
+  else
+    erb :'quotes/index'
   end
-  erb :'quotes/index'
 end
 
 

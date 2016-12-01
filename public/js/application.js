@@ -4,17 +4,19 @@ $(document).ready(function() {
 
 
 var addText = function(){
-  $('.space').on( "mouseover", function(event){
+  $('.space').on( "click", function(event){
     event.preventDefault();
 
       var $this = $(this);
-      var url =
+      var url ='/quotes'
 
       $.ajax({
       url: url,
-      method: method
+      method: 'GET'
     })
-
+      .done(function(response){
+        console.log(response)
+      })
 
   })
 }
