@@ -1,4 +1,14 @@
-SHOW  RANDOM QUOTE WITH PICTURE
-<h1><%=@random_quote.quote%></h1>
-<br>
-<h2><%=@random_quote.character.name%></h2>
+<div class="row">
+   <div class="one column">
+    login buttons
+   </div>
+   <div class="eleven columns">
+     <div id="info">
+       <h1 class="text"><%=@random_quote.quote%></h1>
+       <h2 class="text"><%=@random_quote.character.name%></h2>
+     </div>
+     <p>
+       <img src ="<%=@nasa_info["url"]%>">
+     </p>
+   </div>
+ </div>

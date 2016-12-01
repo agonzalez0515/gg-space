@@ -7,6 +7,7 @@
     See: http://necolas.github.com/normalize.css/
   -->
   <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" />
   <!--
     application.css is where you put your styles
   -->
@@ -21,6 +22,8 @@
   <header>
     <%= erb :'/_header' %>
   </header>
-  <%= yield %>
+  <div class="container">
+    <%= yield %>
+  </div>
 </body>
 </html>
