@@ -1,8 +1,20 @@
 $(document).ready(function() {
-  addtext();
+  addText();
 });
 
 
-var addText = function(event){
-  event.preventDefault;
+var addText = function(){
+  $('.space').on( "mouseover", function(event){
+    event.preventDefault();
+
+      var $this = $(this);
+      var url =
+
+      $.ajax({
+      url: url,
+      method: method
+    })
+
+
+  })
 }
