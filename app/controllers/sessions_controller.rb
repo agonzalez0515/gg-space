@@ -4,12 +4,12 @@ end
 
 
 post '/sessions' do
-  @user = User.find_by_email(params[:email])
+  @user = User.find_by(username: params[:username])
 
   if @user && @user.password == params[:password]
     # session[:id] = @user.id
     login(@user)
-    redirect '/'
+    redirect '/quotes'
 
   else
     @errors = ["Username && Password not found."]
@@ -22,6 +22,6 @@ end
 # delete '/sessions/:id' do
 delete '/sessions' do
   # session[:id] = nil
-  logout 
+  logout
   redirect '/'
 end
