@@ -1,0 +1,12 @@
+<a class="button" href="/">home</a>
+<% if current_user %>
+<a class="button" href="/quotes/new">Add Quote</a>
+  <br>
+  <form class="logout-form" action="/sessions" method="POST">
+    <input type="hidden" name="_method" value="DELETE">
+    <input class="button" type="submit" value="Logout">
+  </form>
+<% else %>
+  <a class="button" href="/sessions/new">Login</a>
+  <a class="button" href="/users/new">Register</a>
+<% end %>

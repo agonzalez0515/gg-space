@@ -1,0 +1,78 @@
+.text{
+  color: white;
+}
+
+#picture{
+  width: 600px;
+  height: 500px;
+  padding: 40px;
+  background-image: url("http://static.tumblr.com/bfa1742f89b90ed71011a64f6fb621dc/fwomyyy/wbanicxhl/tumblr_static_edmitfqygeg4g4kk8s0w88gks.jpg");
+  position: relative;
+
+}
+.picture-div{
+  padding-top: 25px;
+  color: #438FE8;
+
+}
+
+#info{
+  vertical-align: middle;
+  text-align: center;
+  margin-top: 100px;
+  border: 4px solid white;
+  display: inline-block;
+}
+
+.front-page{
+  margin: 50px;
+}
+
+.title{
+  text-align: center;
+  margin: 100px;
+}
+
+.top-header{
+  margin-top: 40px;
+  text-align: center;
+}
+
+.logo{
+  display: block;
+  margin: auto;
+  padding-left: 200px;
+}
+
+button{
+  color: #438FE8;
+  border: 2px solid #438FE8;
+  width: 250px;
+}
+
+button:hover {
+  background-color: #438FE8;
+  color: white;
+  border: 2px solid #438FE8;
+}
+
+.button{
+  color: #438FE8;
+  border: 2px solid #438FE8;
+}
+
+.button:hover {
+  background-color: #438FE8;
+  color: white;
+  border: 2px solid #438FE8;
+}
+
+.add-quote-form{
+  color: #438FE8;
+  margin-top: 200px;
+  margin-left: 100px;
+}
+
+textarea {
+    width: 400px;
+}
