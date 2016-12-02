@@ -31,4 +31,21 @@
 
 .top-header{
   margin: 40px;
+  text-align: center;
+}
+
+button{
+  color: #438FE8;
+  border: 2px solid #438FE8;
+  width: 250px;
+}
+
+button:hover {
+    background-color: #438FE8;
+    color: white;
+    border: 2px solid #438FE8;
+}
+
+.left-side{
+  text-align: center;
 }

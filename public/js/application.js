@@ -1,7 +1,26 @@
 $(document).ready(function() {
+  getForms();
   addText();
   getImage();
 });
+
+var getForms = function(){
+  $('.forms').on('click', function(event){
+  event.preventDefault();
+
+    $.ajax({
+      url: '/',
+      method: 'GET'
+    })
+    .done(function(response){
+      $('.login-form').append(response);
+      $('.forms').hide();
+    })
+
+  })
+}
+
+
 
 var addText = function(){
   $('#picture').on( "click", function(event){
@@ -16,6 +35,7 @@ var addText = function(){
   })
   .done(function(response){
     $('#picture').append(response);
+
     })
   })
 }
