@@ -16,9 +16,9 @@ post '/quotes' do
   p params
   @character = Character.find_by(name: params[:'new-quote'][:name])
   p @character.name
-  @quote = @character.quotes.new(params[:quote])
+  @quote = @character.quotes.new(quote: params[:'new-quote'][:quote])
   if @quote.save
-    erb :'quotes'
+    erb :'quotes/index'
   else
     redirect '/quotes/new'
   end

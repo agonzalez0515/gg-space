@@ -1,10 +1,21 @@
-<form class="new-quote" action="/quotes" method="POST">
-<br><select name="new-quote[name]">
-      <option value="Lorelai">Lorelai</option>
-      <option value="Rory">Rory</option>
-      <option value="Michele">Michele</option>
-      <option value="Luke">Luke</option>
-      <option value="Emily">Emily</option>
-<br><textarea name="new-quote[quote]" placeholder="Quote:"></textarea>
-<br><input type="submit" value="Submit">
-</form>
+
+<div class="row add-quote-form">
+  <div class="four columns">
+    <h3>Choose a character and type in your quote.</h3>
+  </div>
+  <div class="eight columns">
+    <form class="new-quote" action="/quotes" method="POST">
+      <select name="new-quote[name]">
+        <option value="Lorelai">Lorelai</option>
+        <option value="Rory">Rory</option>
+        <option value="Michele">Michele</option>
+        <option value="Luke">Luke</option>
+        <option value="Emily">Emily</option>
+      </select>
+      <br>
+      <textarea name="new-quote[quote]" placeholder="Quote:"></textarea>
+      <br>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</div>
