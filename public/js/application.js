@@ -1,26 +1,39 @@
 $(document).ready(function() {
-  getForms();
+  getLoginForm();
+  getRegisterForm();
   addText();
   getImage();
 });
 
-var getForms = function(){
-  $('.forms').on('click', function(event){
+var getLoginForm = function(){
+  $('.add-login').on('click', function(event){
   event.preventDefault();
 
     $.ajax({
-      url: '/',
+      url: '/sessions/new',
       method: 'GET'
     })
     .done(function(response){
       $('.login-form').append(response);
-      $('.forms').hide();
+      $('.add-login').hide();
     })
-
-  })
+    })
 }
 
+var getRegisterForm = function(){
+  $('.add-register').on('click', function(event){
+  event.preventDefault();
 
+  $.ajax({
+    url: '/users/new',
+    method: 'GET'
+  })
+  .done(function(response){
+    $('.register-form').append(response);
+    $('.add-register').hide();
+  })
+  })
+}
 
 var addText = function(){
   $('#picture').on( "click", function(event){
@@ -34,6 +47,7 @@ var addText = function(){
     method: 'GET'
   })
   .done(function(response){
+    $('#info').remove();
     $('#picture').append(response);
 
     })

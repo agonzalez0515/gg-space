@@ -1,5 +1,9 @@
 get '/sessions/new' do
-  erb :'sessions/new'
+  if request.xhr?
+    erb :'sessions/new', layout: false
+  else
+    redirect 'sessions/new'
+  end
 end
 
 

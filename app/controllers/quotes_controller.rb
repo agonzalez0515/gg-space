@@ -8,9 +8,20 @@ get '/quotes' do
   end
 end
 
-
 get '/quotes/new' do
-  @quote = Quote.new(params[:quote])
+  erb :'quotes/new'
+end
+
+post '/quotes' do
+  p params
+  @character = Character.find_by(name: params[:'new-quote'][:name])
+  p @character.name
+  @quote = @character.quotes.new(params[:quote])
+  if @quote.save
+    erb :'quotes'
+  else
+    redirect '/quotes/new'
+  end
 end
 
 get '/quotes/photo' do
