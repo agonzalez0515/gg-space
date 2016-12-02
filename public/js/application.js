@@ -1,6 +1,6 @@
 $(document).ready(function() {
   addText();
-  loadImage();
+  getImage();
 });
 
 var addText = function(){
@@ -14,26 +14,33 @@ var addText = function(){
       url: url,
       method: 'GET'
     }).done(function(response){
+      // debugger;
+      //   if($(event.target).children().length === 1){
+      //     $(event.target).children('#info').toggle();
+      //  }else {
         $('#picture').append(response);
-        //need to hide the text on mouseaway
+      // }
     })
   })
 }
 
 
 
-var loadImage = function(){
-$('#url').load(function(event){
-
-      var url = '/quotes'
-
-      $.ajax({
-      url: url,
-      method: 'GET'
-    }).done(function(response){
-      console.log(response)
-
-      .css(background-image: response)
-    })
+var getImage = function(){
+  $.ajax({
+    url: '/quotes/photo',
+    dataType: 'json'
   })
+  .done(loadImage)
+  .fail(ajaxFail)
+}
+
+var loadImage = function(response){
+  var $imageContainer = $('#picture')
+  $imageContainer.css('background-image', 'url(' + response.url+ ')');
+}
+
+var ajaxFail = function(response){
+  console.log("fail")
+  console.log(response)
 }
